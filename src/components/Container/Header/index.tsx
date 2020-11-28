@@ -5,7 +5,7 @@ import { ContainerHeader } from './styled';
 
 const Header: React.FC = () => {
     return (
-        <Layout.Header style={{ height: 300, padding: 0 }}>
+        <Layout.Header style={{ height: 200, padding: 0 }}>
             <ContainerHeader />
         </Layout.Header>
     );

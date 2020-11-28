@@ -104,7 +104,7 @@ const MovieIndex: React.FC<MatchProps> = ({ match }) => {
                 ]}
             />
             <Row justify="space-between">
-                <Col span={18}>
+                <Col md={15} sm={24}>
                     <>
                         <ContainerDescriptionMovie>
                             <h1>{movie?.title}</h1>
@@ -112,19 +112,23 @@ const MovieIndex: React.FC<MatchProps> = ({ match }) => {
                             <p>{movie?.overview}</p>
                             <br />
 
-                            <div>
-                                <p>Realease date: {movie?.releaseDate}</p>
-                                <p>
-                                    Rating:{' '}
-                                    <Avatar
-                                        style={{
-                                            backgroundColor: '#f56a00',
-                                        }}
-                                    >
-                                        {movie?.voteAverage}
-                                    </Avatar>
-                                </p>
-                            </div>
+                            <Row>
+                                <Col>
+                                    <p>Realease date: {movie?.releaseDate}</p>
+                                </Col>
+                                <Col>
+                                    <p>
+                                        Rating:{' '}
+                                        <Avatar
+                                            style={{
+                                                backgroundColor: '#f56a00',
+                                            }}
+                                        >
+                                            {movie?.voteAverage}
+                                        </Avatar>
+                                    </p>
+                                </Col>
+                            </Row>
                             <br />
                         </ContainerDescriptionMovie>
                         <Space align="baseline">
@@ -166,7 +170,7 @@ const MovieIndex: React.FC<MatchProps> = ({ match }) => {
                         ))}
                     </Row>
                 </Col>
-                <Col span={6}>
+                <Col md={9} sm={24}>
                     <Image
                         src={
                             movie?.posterPath

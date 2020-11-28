@@ -5,6 +5,12 @@ export const Image = styled.img`
     width: 400px;
     height: 600px;
     border-radius: 8px;
+
+    @media only screen and (max-width: 500px) {
+        object-fit: scale-down;
+        width: 200px;
+        height: 400px;
+    }
 `;
 
 export const ContainerDescriptionMovie = styled.div`

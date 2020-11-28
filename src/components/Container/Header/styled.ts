@@ -7,6 +7,7 @@ export const ContainerHeader = styled.div`
     height: 100%;
     background-image: url(${wallpaper});
     background-size: 100%;
+    background-repeat: no-repeat;
     background-position: center;
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.4);
