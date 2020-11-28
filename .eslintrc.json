@@ -1,0 +1,32 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "google",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "camelcase":"off",
+        "prettier/prettier": "warn",
+        "react/prop-types": "off",
+        "prefer-template":"warn",
+        "object-curly-spacing": ["warn", "always"],
+        "no-console":"warn",
+        "no-unused-vars": "warn"
+    }
+}
