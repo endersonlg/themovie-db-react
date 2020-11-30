@@ -41,13 +41,14 @@ const CardMovie: React.FC<PropComponentCardMovie> = ({ movie }) => {
     };
     return (
         <Card
+            key={movie.id}
             bordered
             hoverable
             style={{ width: 240, marginBottom: 18 }}
             cover={
                 <Link to={`/movie/${movie.id}`}>
                     <img
-                        style={{ height: 360 }}
+                        style={{ height: 360, width: 240 }}
                         alt="example"
                         src={
                             movie.posterPath

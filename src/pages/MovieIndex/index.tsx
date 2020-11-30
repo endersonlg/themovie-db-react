@@ -142,7 +142,7 @@ const MovieIndex: React.FC<MatchProps> = ({ match }) => {
                     </>
 
                     <h2>Actors</h2>
-                    <Row gutter={16}>
+                    <Row gutter={16} justify="center">
                         {actors?.map((actor) => (
                             <Col key={actor.name}>
                                 <Card
@@ -152,7 +152,7 @@ const MovieIndex: React.FC<MatchProps> = ({ match }) => {
                                     cover={
                                         <img
                                             alt="example"
-                                            style={{ height: 180 }}
+                                            style={{ height: 180, width: 120 }}
                                             src={
                                                 actor.profilePath
                                                     ? `http://image.tmdb.org/t/p/w780/${actor?.profilePath}`
