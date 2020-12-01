@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Card, notification, Rate } from 'antd';
+import { Avatar, Card, notification, Rate, Image } from 'antd';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Movie } from '../../../pages/types';
@@ -47,9 +47,9 @@ const CardMovie: React.FC<PropComponentCardMovie> = ({ movie }) => {
             style={{ width: 240, marginBottom: 18 }}
             cover={
                 <Link to={`/movie/${movie.id}`}>
-                    <img
+                    <Image
                         style={{ height: 360, width: 240 }}
-                        alt="example"
+                        alt={movie.title}
                         src={
                             movie.posterPath
                                 ? `http://image.tmdb.org/t/p/w1280/${movie.posterPath}`

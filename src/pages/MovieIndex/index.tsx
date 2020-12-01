@@ -14,7 +14,11 @@ import { RouteComponentProps } from 'react-router-dom';
 import { RootState } from '../../redux/store';
 import api from '../../service/api';
 import { Actors, Movie, ResponseActors, ResponseMovieIndex } from '../types';
-import { ContainerDescriptionMovie, Image } from './styled';
+import {
+    ContainerDescriptionMovie,
+    ContainerMovieIndex,
+    Image,
+} from './styled';
 import notFoundMovie from '../../assets/notFoundMovie.png';
 import { createOrUpdate } from '../../redux/reducers/movieState';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -91,7 +95,7 @@ const MovieIndex: React.FC<MatchProps> = ({ match }) => {
     };
 
     return (
-        <>
+        <ContainerMovieIndex>
             <Breadcrumbs
                 paths={[
                     {
@@ -104,7 +108,7 @@ const MovieIndex: React.FC<MatchProps> = ({ match }) => {
                 ]}
             />
             <Row justify="space-between">
-                <Col md={15} sm={24}>
+                <Col md={18} sm={24}>
                     <>
                         <ContainerDescriptionMovie>
                             <h1>{movie?.title}</h1>
@@ -148,7 +152,10 @@ const MovieIndex: React.FC<MatchProps> = ({ match }) => {
                                 <Card
                                     bordered
                                     hoverable
-                                    style={{ width: 120, marginBottom: 18 }}
+                                    style={{
+                                        width: 120,
+                                        marginBottom: 18,
+                                    }}
                                     cover={
                                         <img
                                             alt="example"
@@ -170,7 +177,7 @@ const MovieIndex: React.FC<MatchProps> = ({ match }) => {
                         ))}
                     </Row>
                 </Col>
-                <Col md={9} sm={24}>
+                <Col md={6} sm={24} style={{ flex: 1, textAlign: 'center' }}>
                     <Image
                         src={
                             movie?.posterPath
@@ -180,7 +187,7 @@ const MovieIndex: React.FC<MatchProps> = ({ match }) => {
                     />
                 </Col>
             </Row>
-        </>
+        </ContainerMovieIndex>
     );
 };
 

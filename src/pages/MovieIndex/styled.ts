@@ -1,10 +1,21 @@
 import styled from 'styled-components';
 
+export const ContainerMovieIndex = styled.div`
+    .ant-card-meta-description {
+        height: 75px;
+        display: -webkit-box;
+        height: 60px;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+    }
+`;
+
 export const Image = styled.img`
     object-fit: cover;
     width: 400px;
-    height: 600px;
     border-radius: 8px;
+    object-fit: scale-down;
 
     @media only screen and (max-width: 500px) {
         object-fit: scale-down;

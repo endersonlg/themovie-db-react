@@ -45,38 +45,6 @@ const Categories: React.FC = () => {
                     ))}
                 </Row>
             </ContainerCategories>
-
-            {/* <Row>
-                <Col span={6}>
-                    <Form.Item required label="category">
-                        <Select
-                            showSearch
-                            loading={categories ? false : true}
-                            placeholder="Select..."
-                            value={categorySelected}
-                            onChange={(value) => setCategorySelected(value)}
-                            options={categories?.map((categ) => ({
-                                key: categ.id,
-                                value: categ.id,
-                                label: categ.name,
-                            }))}
-                            filterOption={(input, option) => {
-                                if (
-                                    option?.label &&
-                                    typeof option.label === 'string'
-                                ) {
-                                    return (
-                                        option?.label
-                                            .toLowerCase()
-                                            .indexOf(input.toLowerCase()) >= 0
-                                    );
-                                }
-                                return false;
-                            }}
-                        />
-                    </Form.Item>
-                </Col>
-            </Row> */}
         </>
     );
 };

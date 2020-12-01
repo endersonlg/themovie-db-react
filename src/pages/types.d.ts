@@ -4,7 +4,7 @@ export type ResultMovie = {
     title: string;
     overview: string;
     vote_average: number;
-    release_date: Date;
+    release_date: string;
 };
 
 export type ResponseMovie = {
@@ -24,7 +24,7 @@ export type ResponseMovieIndex = {
             title: string;
             overview: string;
             vote_average: number;
-            release_date: Date;
+            release_date: string;
         };
     };
 };
@@ -35,7 +35,7 @@ export type Movie = {
     title: string;
     overview: string;
     voteAverage: number;
-    releaseDate: Date;
+    releaseDate: string;
     stars: number;
 };
 
