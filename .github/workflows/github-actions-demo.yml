@@ -38,19 +38,16 @@ jobs:
               run: yarn run test -- --coverage --watchAll=false
 
             - name: Create Paste GitHub Page
-                run: mkdir githubpage
+              run: mkdir githubpage
 
             - name: Copy paste coverage to githubpage
-                run: cp -r ./coverage/lcov-report ./githubpage
+              run: cp -r ./coverage/lcov-report ./githubpage
 
             - name: Copy paste buildtest to githubpage
-                run: cp -r ./buildtest ./githubpage
+              run: cp -r ./buildtest ./githubpage
 
             - name: Deploy coverage and storybook to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./githubpage
-
-
-
