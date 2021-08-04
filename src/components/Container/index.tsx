@@ -10,7 +10,9 @@ const Container: React.FC = ({ children }) => {
             <SideBar />
             <Layout>
                 <Header />
-                <Body>{children}</Body>
+                <>
+                    <Body>{children}</Body>
+                </>
             </Layout>
         </Layout>
     );
