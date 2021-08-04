@@ -37,9 +37,6 @@ jobs:
             - name: Test
               run: yarn run test -- --coverage --watchAll=false
 
-            - name: Create Paste GitHub Page
-              run: mkdir githubpage
-
             - name: Copy paste coverage to githubpage
               run: cp -r ./coverage/lcov-report ./githubpage
 
