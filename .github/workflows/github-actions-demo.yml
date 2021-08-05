@@ -41,13 +41,13 @@ jobs:
               run: yarn storybook-build
 
             - name: Copy paste coverage to githubpage
-              run: cp -r ./coverage/lcov-report ./githubpage
+              run: cp -r ./coverage/lcov-report ./.github/pages
 
             - name: Copy paste storybook-static to githubpage
-              run: cp -r ./storybook-static ./githubpage
+              run: cp -r ./storybook-static ./.github/pages
 
             - name: Deploy coverage and storybook to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./githubpage
+                  publish_dir: ./.github/pages
