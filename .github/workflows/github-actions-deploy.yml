@@ -1,0 +1,50 @@
+name: GitHub Actions Deploy
+
+on: [push]
+
+env:
+    SKIP_PREFLIGHT_CHECK: true
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: checkout repository
+              uses: actions/checkout@v2
+
+            - name: Set up Node
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12
+
+            - name: Yarn cache directory
+              id: yarn-cache-dir
+              run: echo "::set-output name=dir::$(yarn cache dir)"
+
+            - name: Yarn cache
+              uses: actions/cache@v2
+              id: yarn-cache
+              with:
+                  path: ${{ steps.yarn-cache-dir.outputs.dir }}
+                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-yarn-
+
+            - name: install dependecies
+              run: yarn
+
+            - name: Storybook build
+              run: yarn storybook-build
+
+            - name: Copy paste coverage to githubpage
+              run: cp -r ./coverage/lcov-report ./.github/pages
+
+            - name: Copy paste storybook-static to githubpage
+              run: cp -r ./storybook-static ./.github/pages
+
+            - name: Deploy coverage and storybook to GitHub Pages
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./.github/pages

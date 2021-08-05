@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: GitHub Actions Test
 
 on: [push]
 
@@ -6,7 +6,7 @@ env:
     SKIP_PREFLIGHT_CHECK: true
 
 jobs:
-    build:
+    test:
         runs-on: ubuntu-latest
 
         steps:
@@ -35,19 +35,4 @@ jobs:
               run: yarn
 
             - name: Test
-              run: yarn run test -- --coverage --watchAll=false
-
-            - name: Storybook build
-              run: yarn storybook-build
-
-            - name: Copy paste coverage to githubpage
-              run: cp -r ./coverage/lcov-report ./.github/pages
-
-            - name: Copy paste storybook-static to githubpage
-              run: cp -r ./storybook-static ./.github/pages
-
-            - name: Deploy coverage and storybook to GitHub Pages
-              uses: peaceiris/actions-gh-pages@v3
-              with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./.github/pages
+              run: yarn test
