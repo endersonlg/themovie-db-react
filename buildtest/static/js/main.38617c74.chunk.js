@@ -1,2 +1,0 @@
-(this["webpackJsonptest-actions-coverage"]=this["webpackJsonptest-actions-coverage"]||[]).push([[0],{9:function(e,t,c){"use strict";c.r(t);var s=c(1),n=c.n(s),r=c(3),i=c.n(r),o=c(0);var a=function(){return Object(o.jsxs)("div",{className:"App",children:[Object(o.jsx)("h1",{children:"Test Git Hub Actions"}),Object(o.jsx)("p",{children:"ola"})]})};i.a.render(Object(o.jsx)(n.a.StrictMode,{children:Object(o.jsx)(a,{})}),document.getElementById("root"))}},[[9,1,2]]]);
-//# sourceMappingURL=main.38617c74.chunk.js.map
