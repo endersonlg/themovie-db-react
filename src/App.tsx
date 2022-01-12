@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 
 import GlobalStyle from './style/GlobalStyle';
 console.log(
-    'testedaddadasdasdasdasdasdsaddasdasddasdasdsaasdsdasdsaajkdasajads',
+    'testedaddadasdasdasdasdasdsdasdasdaddasdasddasdasdsaasdsdasdsaajkdasajads',
 );
 const App: React.FC = () => {
     return (
