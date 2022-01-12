@@ -6,8 +6,6 @@ import { menuState } from './reducers/menuState';
 import { persistReducer, persistStore } from 'redux-persist';
 import { movieStarsState } from './reducers/movieState';
 
-// import { acessoSlice } from './reducers/acessos';
-
 const reducers = combineReducers({
     menu: menuState.reducer,
     movieStars: movieStarsState.reducer,
