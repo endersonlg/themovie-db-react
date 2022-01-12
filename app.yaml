@@ -1,5 +1,5 @@
 env: standard
-runtime: nodejs12
+runtime: nodejs14
 
 handlers:
   - url: /static
