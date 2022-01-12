@@ -8,7 +8,7 @@ import Routes from './routes';
 import { Provider } from 'react-redux';
 
 import GlobalStyle from './style/GlobalStyle';
-console.log('testedaddasddasdasddasdasdsaasdsdasdsaajkdasajads');
+console.log('testedaddasdasdsaddasdasddasdasdsaasdsdasdsaajkdasajads');
 const App: React.FC = () => {
     return (
         <Provider store={store}>
