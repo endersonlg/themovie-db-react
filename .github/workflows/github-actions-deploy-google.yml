@@ -7,6 +7,7 @@ on:
 
 env:
     SKIP_PREFLIGHT_CHECK: true
+    REACT_APP_AUTHORIZATION: ${{ secrets.REACT_APP_AUTHORIZATION }}
 
 jobs:
     build:
