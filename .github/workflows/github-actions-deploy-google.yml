@@ -11,6 +11,18 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
+
+            - name: Install Node
+              uses: actions/setup-node@v2 # Lib para instalar o node em nossa VM
+              with:
+                  node-version: '16' # Qual versão do node utilizaremos
+
+            - name: Install dependecies
+              run: yarn install # Instalar as dependecias
+
+            - name: build
+              run: yarn build
+
             - uses: google-github-actions/deploy-appengine@main
               with:
                   credentials: ${{ secrets.GCP_PROJECT }}
