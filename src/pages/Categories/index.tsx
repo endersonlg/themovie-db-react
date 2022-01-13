@@ -28,7 +28,7 @@ const Categories: React.FC = () => {
                     },
                 ]}
             />
-            <h2>Select Categorya</h2>
+            <h2>Select Categoryaaa</h2>
             <ContainerCategories>
                 <Row gutter={12} justify={'center'}>
                     {categories?.map((category) => (
