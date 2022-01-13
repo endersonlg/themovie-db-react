@@ -1,7 +1,6 @@
 import { configureStore, combineReducers, Action } from '@reduxjs/toolkit';
 import thunk, { ThunkAction } from 'redux-thunk';
 import storage from 'redux-persist/lib/storage';
-// import { authSlice } from './reducers/auth';
 import { menuState } from './reducers/menuState';
 import { persistReducer, persistStore } from 'redux-persist';
 import { movieStarsState } from './reducers/movieState';
