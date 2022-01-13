@@ -1,5 +1,6 @@
 env: standard
 runtime: nodejs14
+service: app-engine-react-demo
 
 handlers:
   - url: /static
@@ -12,14 +13,3 @@ handlers:
   - url: .*
     static_files: build/index.html
     upload: build/index.html
-######### optional gae flex config (run from build folder) ########
-# runtime: nodejs
-# env: flex
-#
-# config optimized for demo for cost savings (not production)
-# manual_scaling:
-#   instances: 1
-# resources:
-#   cpu: 1
-# memory_gb: 0.5
-# disk_size_gb: 10
