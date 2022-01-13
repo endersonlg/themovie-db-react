@@ -9,7 +9,6 @@ import { Provider } from 'react-redux';
 
 import GlobalStyle from './style/GlobalStyle';
 
-console.log('pça');
 const App: React.FC = () => {
     return (
         <Provider store={store}>
