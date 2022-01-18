@@ -1,9 +1,6 @@
-name: 'examples'
+name: 'Git Action Deploy GCP'
 
-on:
-    push:
-        branches:
-            - 'main'
+on: [push]
 
 env:
     SKIP_PREFLIGHT_CHECK: true
@@ -11,7 +8,7 @@ env:
 
 jobs:
     build:
-        name: GAE Deploy
+        name: Build and Deploy
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
