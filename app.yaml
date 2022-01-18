@@ -1,6 +1,5 @@
 env: standard
 runtime: nodejs16
-service: app-engine-react-demo2
 
 handlers:
   - url: /static
