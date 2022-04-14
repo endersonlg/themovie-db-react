@@ -5,19 +5,16 @@ name: test
 on: 
   workflow_dispatch:
     inputs:
-      environment:
-        description: 'Define env name'     
+      manual_deploy:
+        description: "Manual Deploy"
         required: true
-        default: 'prod'
-      branch:
-        description: 'Define branch name'     
-        required: true
-        default: 'master'
+        type: boolean
+        default: true
 
 jobs:
   print-tag:
     runs-on: ubuntu-latest
-    if:  ${{ github.event.inputs.print_tags == 'true' }} 
+    if:  ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.reason == 'test_workflow_input' }}
     steps:
       - name: Print the input tag to STDOUT
-        run: echo  The tags are ${{ github.event.inputs.tags }} 
+        run: echo  foiiiii!!! :D
