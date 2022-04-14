@@ -1,6 +1,13 @@
 name: 'Git Action Deploy GCP'
 
-on: [push]
+on:   
+  workflow_dispatch:
+    inputs:
+      manual_deploy:
+        description: "Manual Deploy"
+        required: true
+        type: boolean
+        default: true
 
 env:
     SKIP_PREFLIGHT_CHECK: true
