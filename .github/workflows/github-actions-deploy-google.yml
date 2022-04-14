@@ -3,11 +3,11 @@ name: 'Git Action Deploy GCP'
 on:   
   workflow_dispatch:
     inputs:
-      manual_deploy:
-        description: "Manual Deploy"
+      logLevel:
+        description: 'Log level'     
         required: true
-        type: boolean
-        default: true
+        default: 'warning' 
+        type: choice
         options:
         - info
         - warning
