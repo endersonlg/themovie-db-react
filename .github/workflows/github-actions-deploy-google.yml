@@ -9,7 +9,9 @@ on:
         type: boolean
         default: true
         options:
-        - gh-pages
+        - info
+        - warning
+        - debug 
 
 env:
     SKIP_PREFLIGHT_CHECK: true
