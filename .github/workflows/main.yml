@@ -14,6 +14,7 @@ on:
 jobs:
   print-tag:
     runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/test_workflow_input' }}
     steps:
       - name: Print the input tag to STDOUT
-        run: echo ${{ github.ref }}
+        run: echo passei ihuuuolllll :D
