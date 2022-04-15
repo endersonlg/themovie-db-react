@@ -14,7 +14,6 @@ on:
 jobs:
   print-tag:
     runs-on: ubuntu-latest
-#     if:  ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.manual_deploy == 'test_workflow_input' }}
     steps:
       - name: Print the input tag to STDOUT
         run: echo ${{ github.ref }}
