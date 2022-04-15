@@ -17,4 +17,4 @@ jobs:
 #     if:  ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.manual_deploy == 'test_workflow_input' }}
     steps:
       - name: Print the input tag to STDOUT
-        run: echo "Deploying to production server on branch ${{ github.ref == 'refs/heads/main' }}
+        run: echo ${{ github.ref == 'refs/heads/main' }}
